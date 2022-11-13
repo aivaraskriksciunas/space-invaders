@@ -80,7 +80,7 @@ namespace SpaceInvaders.GameObjects
             if ( bullet.BulletTarget != BulletTarget.PLAYER )
                 return false;
 
-            Console.WriteLine( "Ouch" );
+            Health -= bullet.Damage;
             return true;
         }
 

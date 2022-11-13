@@ -36,7 +36,7 @@ namespace SpaceInvaders.GameObjects.Enemies
         {
             for ( int i = Enemies.Count - 1; i >= 0; i-- )
             {
-                Enemies[i].Update( delta );
+                Enemies[i].Update( delta, bulletManager );
 
                 if ( Enemies[i].Health <= 0 )
                 {

@@ -20,7 +20,7 @@ namespace SpaceInvaders.Scenes
 
         public override void UpdateScene( float delta )
         {
-            throw new NotImplementedException();
+
         }
     }
 }

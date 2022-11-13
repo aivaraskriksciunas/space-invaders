@@ -1,5 +1,7 @@
 ﻿using SpaceInvaders.GameObjects.Bullets;
 using SpaceInvaders.Utils;
+using SFML.System;
+using System;
 
 namespace SpaceInvaders.GameObjects.Enemies
 {
@@ -11,9 +13,16 @@ namespace SpaceInvaders.GameObjects.Enemies
 
         public const float ENEMY_SIZE = 15;
 
+        private int shootInterval;
+        private Clock shootClock;
+
         public Enemy( int health = 1 )
         {
             Health = health;
+
+            Random randomGen = new Random();
+            shootInterval = randomGen.Next( 800, 3000 );
+            shootClock = new Clock();
         }
 
         public bool OnBulletHit( Bullet bullet )
@@ -31,9 +40,15 @@ namespace SpaceInvaders.GameObjects.Enemies
             PosY = posy;
         }
 
-        public void Update( float delta )
+        public void Update( float delta, BulletManager bulletManager )
         {
             PosY += 20 * delta;
+
+            if ( shootClock.ElapsedTime.AsMilliseconds() > shootInterval )
+            {
+                bulletManager.Shoot( PosX, PosY, (float)Math.PI * 1.5f, BulletTarget.PLAYER );
+                shootClock.Restart();
+            }
         }
 
         public Boundaries GetCollisionBoundaries()
