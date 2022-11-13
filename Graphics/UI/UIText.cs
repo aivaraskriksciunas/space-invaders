@@ -18,6 +18,14 @@ namespace SpaceInvaders.Graphics.UI
             text.CharacterSize = charSize;
         }
 
+        public void CenterText()
+        {
+            FloatRect bounds = text.GetGlobalBounds();
+            text.Position = new Vector2f(
+                text.Position.X - bounds.Width / 2,
+                text.Position.Y );
+        }
+
         public void SetDisplayText( string txt )
         {
             text.DisplayedString = txt;
