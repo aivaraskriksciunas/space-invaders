@@ -4,9 +4,9 @@ using SFML.Graphics;
 
 namespace SpaceInvaders.Graphics
 {
-    class RenderQueue
+    public class RenderQueue
     {
-        private List<IRenderable> queue;
+        public List<IRenderable> queue { get; private set; }
 
         public RenderQueue()
         {

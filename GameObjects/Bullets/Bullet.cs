@@ -3,12 +3,12 @@ using SpaceInvaders.Utils;
 
 namespace SpaceInvaders.GameObjects.Bullets
 {
-    enum BulletTarget {
+    public enum BulletTarget {
         PLAYER,
         ENEMY
     }
 
-    class Bullet
+    public class Bullet
     {
         public float PosX { get; private set; }
         public float PosY { get; private set; }

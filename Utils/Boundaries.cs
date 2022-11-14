@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SpaceInvaders.Utils
 {
-    class Boundaries
+    public class Boundaries
     {
         public float StartX { get; private set; }
         public float StartY { get; private set; }

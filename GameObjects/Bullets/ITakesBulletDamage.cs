@@ -2,7 +2,7 @@
 
 namespace SpaceInvaders.GameObjects.Bullets
 {
-    interface ITakesBulletDamage
+    public interface ITakesBulletDamage
     {
         public bool OnBulletHit( Bullet bullet );
 

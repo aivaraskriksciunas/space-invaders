@@ -3,7 +3,7 @@ using SFML.Graphics;
 
 namespace SpaceInvaders.Graphics
 {
-    interface IRenderable
+    public interface IRenderable
     {
         public void Render( RenderWindow window );
     }

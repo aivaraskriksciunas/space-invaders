@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Assets",
+    "\\Graphics"
   ],
-  "SelectedNode": "\\SpaceInvaders.csproj",
+  "SelectedNode": "\\Assets\\press-start.ttf",
   "PreviewInSolutionExplorer": false
 }

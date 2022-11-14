@@ -5,7 +5,7 @@ using System;
 
 namespace SpaceInvaders.GameObjects.Enemies
 {
-    class Enemy : ITakesBulletDamage
+    public class Enemy : ITakesBulletDamage
     {
         public float PosX { get; private set; }
         public float PosY { get; private set; }

@@ -4,7 +4,7 @@ using SpaceInvaders.Utils;
 
 namespace SpaceInvaders.GameObjects.Bullets
 {
-    class BulletManager
+    public class BulletManager
     {
         public List<Bullet> Bullets { get; private set; }
         private Boundaries ScreenBoundary;
